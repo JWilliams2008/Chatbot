@@ -14,7 +14,7 @@ async function sendMessage() {
     
     // Check if the user message contains predefined economic terms
     const predefinedResponses = {
-        'hi': 'Bot: Hi! Please ask me if you want a definition of an economic term or if you want me to ask you a practise question.',
+        'hi': 'Bot: Hi! Please ask me if you want a definition of an economic term or if you want me to ask you a practice question.',
         'gdp': 'Bot: GDP stands for Gross Domestic Product. It is the total monetary or market value of all the finished goods and services produced within a country\'s borders in a specific time period.',
         'ad': 'Bot: AD stands for aggregate demand and it measures the total amount of demand in an economy. Its equation is AD = C + I + G + (X-M)',
         'inflation': 'Bot: Inflation is the rate at which the general level of prices for goods and services is rising, and subsequently, purchasing power is falling.',
@@ -117,46 +117,9 @@ async function sendMessage() {
         }
     }
 
-    try {
-        // Send the user input to the Flask backend (POST request)
-        const response = await fetch('http://localhost:5500/chat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ message: userInput })
-        });
-
-        // Check if the response is OK (status 200)
-        if (!response.ok) {
-            console.error('Failed to fetch:', response.statusText);
-            throw new Error('Failed to fetch response from server.');
-        }
-
-        // Attempt to parse the JSON response
-        const data = await response.json();
-
-        // Log the response from the backend for debugging
-        console.log('API Response:', data);
-
-        // Handle response from the bot
-        if (data && data.response) {
-            const botMessage = document.createElement('div');
-            botMessage.textContent = `Bot: ${data.response}`;
-            chatbox.appendChild(botMessage);
-        } else {
-            const botMessage = document.createElement('div');
-            botMessage.textContent = `Bot: Sorry, something went wrong.`;
-            chatbox.appendChild(botMessage);
-        }
-
-        // Scroll to the bottom of the chatbox after the new message
-        chatbox.scrollTop = chatbox.scrollHeight;
-
-    } catch (error) {
-        console.error('Error:', error);
-        const errorMessage = document.createElement('div');
-        errorMessage.textContent = `Bot: Error with request. Try again later. Here is the link to the specification if needed https://qualifications.pearson.com/content/dam/pdf/A%20Level/Economics/2015/specification-and-sample-assessment-materials/A_Level_Econ_A_Spec.pdf`;
-        chatbox.appendChild(errorMessage);
-    }
+    // If no condition is met, show an error message
+    const errorMessage = document.createElement('div');
+    errorMessage.textContent = "Bot: Sorry, I didn't understand that. Please ask about an economic term or request a practice question.";
+    chatbox.appendChild(errorMessage);
+    chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
 }
