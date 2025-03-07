@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center; /* Horizontally centers content */
     align-items: center; /* Vertically centers content */
-    background-image: url('idk.png');
+    background-image: url('economics.webp');
     background-size: cover; /* Ensures the background image covers the entire viewport */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
