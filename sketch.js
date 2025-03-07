@@ -14,6 +14,7 @@ async function sendMessage() {
     
     // Check if the user message contains predefined economic terms
     const predefinedResponses = {
+        'hi': 'Bot: Hi! Please ask me if you want a definition of an economic term or if you want me to ask you a practise question.',
         'gdp': 'Bot: GDP stands for Gross Domestic Product. It is the total monetary or market value of all the finished goods and services produced within a country\'s borders in a specific time period.',
         'ad': 'Bot: AD stands for aggregate demand and it measures the total amount of demand in an economy. Its equation is AD = C + I + G + (X-M)',
         'inflation': 'Bot: Inflation is the rate at which the general level of prices for goods and services is rising, and subsequently, purchasing power is falling.',
