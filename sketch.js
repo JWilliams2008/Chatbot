@@ -47,7 +47,7 @@ async function sendMessage() {
         'tariff': 'Bot: A tariff is a tax imposed on imported goods to protect domestic industries or generate government revenue.',
         'subsidy': 'Bot: A subsidy is a government payment to encourage the production or consumption of a particular good or service.',
         'public good': 'Bot: Public goods are goods that are non-excludable and non-rivalrous, meaning they are available to all and one person\'s use does not reduce availability for others.',
-        'externality': 'Bot: An externality is a side effect or consequence of an industrial or commercial activity that affects other parties who did not choose to be involved in that activity.'
+        'externality': 'Bot: An externality is a side effect or consequence of an industrial or commercial activity that affects other parties who did not choose to be involved in that activity.',
         'austerity': 'Bot: Austerity refers to a set of government policies aimed at reducing budget deficits through spending cuts, tax increases, or a combination of both.',
         'fiscal stimulus': 'Bot: Fiscal stimulus is a policy used by the government to increase economic activity, usually through increased public spending or tax cuts.',
         'liquidity': 'Bot: Liquidity refers to how quickly and easily an asset can be converted into cash without affecting its price significantly.',
