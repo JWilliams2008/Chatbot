@@ -158,7 +158,7 @@ async function sendMessage() {
 
     // If no condition is met, show an error message
     const errorMessage = document.createElement('div');
-    errorMessage.textContent = "Bot: Sorry, I didn't understand that. Please ask about an economic term or request a practice question.";
+    errorMessage.textContent = "Bot: Sorry, I didn't understand that. Please ask about an economic term or request a practice question by typing question.";
     chatbox.appendChild(errorMessage);
     chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
 }
